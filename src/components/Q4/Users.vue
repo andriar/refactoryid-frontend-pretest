@@ -32,8 +32,8 @@
 
 <script>
 import axios from "axios";
-import { mapState } from "vuex";
-import { INCREMENT } from "../mutation-types";
+// import { mapState } from "vuex";
+// import { INCREMENT } from "../mutation-types";
 
 export default {
   name: "Users",
@@ -54,11 +54,11 @@ export default {
       .then((response) => {
         this.setData(response.data);
       })
-      .catch((error) => (this.loading = false));
+      .catch(() => (this.loading = false));
   },
   methods: {
     setData(data) {
-      this.$store.dispatch("setData", data);
+      this.$store.dispatch("setDatas", data);
     },
   },
 };
@@ -69,6 +69,8 @@ export default {
 .main {
   background-color: #f5f7fa;
   padding: 10px;
+  font-family: "Lato", sans-serif;
+  height: 100vh;
 }
 .count {
   color: #83dd8b;
@@ -79,5 +81,51 @@ export default {
   border-bottom: 1px solid #e1e1e7;
   color: #646464;
   display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  margin: 10px 5px 10px 5px;
+  border-radius: 8px;
+  flex: 45%;
+}
+
+.body-card {
+  padding: 25px;
+}
+
+.title {
+  font-size: 12px;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.wrapper-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 0px 0px 0px;
+}
+
+.email,
+.phone,
+.website {
+  font-size: 16px;
+}
+
+.website {
+  color: #aed581;
+  font-weight: 600;
 }
 </style>
