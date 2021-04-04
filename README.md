@@ -1,4 +1,7 @@
 # vue-test-code
+ ```
+Soal 1-5 berada di folder src/components. masing masing terdapat folder Q1 - Q5 sesuai soal, dapat di execute di App.vue dengan langkah - langkah yang ada di bawah.
+ ```
 
 ## Project setup
 ```
@@ -22,6 +25,3 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-Expected Output :
-![expected](./src/assets/Expected.png)
